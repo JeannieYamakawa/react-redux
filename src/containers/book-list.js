@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
+//this started as just a view component, but is now a smart component, or 'container,' because of react-redux connection, because it needed to be aware of the state .
 class BookList extends Component {
     renderList(){
-        //this.props.book is brought in from the redux state of books property 
+        //this.props.book is brought in from the redux state of books property
         return this.props.books.map((book)=>{
             return <li key={book.title} className='list-group-item'>{book.title}</li>
         })
